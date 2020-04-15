@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{!-- google fonts --}}
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Covid-19-Bangladesh</title>
+</head>
+
+<body>
+    <section id="results">
+        <h1 class="results-title">Covid-19 Tracker</h1>
+        <h1 class="country">{{country}}</h1>
+        <p class="update">Last updated: <span>{{dateString}}</span> </p>
+
+        <div class="result-boxes">
+            <div class="box confirmed">
+                <h3 class="title">Confirmed</h3>
+                <span class="number">{{confirmed}}</span>
+            </div>
+            <div class="box infected">
+                <h3 class="title">Infected</h3>
+                <span class="number"> {{infected}} </span>
+            </div>
+            <div class="box recovered">
+                <h3 class="title">Recovered</h3>
+                <div class="numbers">
+                    <span class="number"> {{recovered}} </span>
+                    <span class="rate"> / {{recoverRate}}%</span>
+                </div>
+            </div>
+
+            <div class="box deaths">
+                <h3 class="title">Deaths</h3>
+                <div class="numbers">
+                    <span class="number">{{deaths}} </span>
+                    <span class="rate"> / {{deathRate}}%</span>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section id="chart">
+        <div class="chart-container">
+            <div class="chart1">
+                <h1 class="chart-title">Bangladesh <span>Corona</span> chart</h1>
+                <canvas id="myChart" width="500" height="300"></canvas>
+            </div>
+            <div class="chart2">
+                <h1 class="chart-title"> World Daily</h1>
+                <canvas id="myChart2" width="500" height="300"></canvas>
+            </div>
+        </div>
+
+    </section>
+
+    {{>footer}}
+    {{!-- custom js --}}
+    <script src="./js/main.js">
+    </script>
+
+    {{!-- chart.js --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "covid-19-tracker",
+  "version": "1.0.0",
+  "description": "Covid-19 tracker to keep track with current situation of covid-19 Aka Corona Virus.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js -e js,hbs"
+  },
+  "keywords": [
+    "covid-19",
+    "corona"
+  ],
+  "author": "Tousif Ahmed Provat",
+  "license": "ISC",
+  "dependencies": {
+    "chart.js": "^2.9.3",
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "request": "^2.88.2"
+  }
+}

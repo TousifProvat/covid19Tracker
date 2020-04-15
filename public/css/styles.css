@@ -1,0 +1,346 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: rgba(22, 21, 29, 1);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+#results {
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.results-title {
+  font-size: 3rem;
+  color: coral;
+}
+
+.country {
+  font-size: 2.5rem;
+  color: #105b10;
+  padding: 1rem 0;
+}
+
+.update {
+  font-size: 1.5rem;
+  color: #333333;
+}
+
+.result-boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 2rem;
+  width: 85vw;
+}
+
+.result-boxes .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  box-shadow: 0 7px 10px 7px rgba(0, 0, 0, 0.6);
+}
+
+.box .title {
+  font-size: 2.2rem;
+}
+
+.box .number {
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+
+.box .rate {
+  font-size: 2.2rem;
+}
+
+.confirmed {
+  color: rgba(105, 75, 161, 1);
+  border-bottom: 3px solid rgba(105, 75, 161, 1);
+}
+
+.recovered {
+  color: rgba(31, 132, 30, 1);
+  border-bottom: 3px solid rgba(31, 132, 30, 1);
+}
+
+.infected {
+  color: rgba(239, 128, 24, 1);
+  border-bottom: 3px solid rgba(239, 128, 24, 1);
+}
+
+.deaths {
+  color: rgba(212, 7, 7, 1);
+  border-bottom: 3px solid rgba(212, 7, 7, 1);
+}
+
+.chart-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  width: 90vw;
+  text-align: center;
+}
+
+.chart-title {
+  color: rgba(31, 132, 30, 1);
+  font-weight: 500;
+  padding: 2rem 0;
+}
+
+.chart1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.chart2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.chart2 .chart-title {
+  color: coral;
+  font-weight: 600;
+}
+
+.chart-title span {
+  color: coral;
+}
+
+#footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  min-height: 40vh;
+  background-color: #272531;
+  box-shadow: 20px 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.credits {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.credits h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #333333;
+  padding: 1rem 0;
+}
+
+
+
+.credits h1 span a {
+  color: #888888;
+}
+
+
+@media screen and (max-width:1200px) {
+
+
+  section {
+    min-height: 80vh;
+  }
+
+
+  .box .title {
+    font-size: 2rem;
+  }
+
+
+  #footer {
+    min-height: 30vh;
+  }
+
+}
+
+@media screen and (max-width:1024px) {
+  section {
+    min-height: 70vh;
+  }
+
+  .result-boxes {
+    width: 95vw;
+  }
+
+  .box .title {
+    font-size: 1.8rem;
+  }
+
+  .box .number {
+    font-size: 2rem;
+  }
+
+  .box .rate {
+    font-size: 2rem;
+  }
+
+  .chart-container canvas {
+    width: 400px !important;
+  }
+}
+
+@media screen and (max-width:900px) {
+
+  section {
+    min-height: 60vh;
+  }
+
+  .result-boxes {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .result-boxes .box {
+    height: 170px;
+  }
+
+  .box .title {
+    font-size: 1.7rem;
+  }
+
+  .box .number {
+    font-size: 1.8rem;
+  }
+
+  .box .rate {
+    font-size: 1.8rem;
+  }
+
+  .chart-container canvas {
+    width: 380px !important;
+  }
+
+
+  #footer {
+    min-height: 20vh;
+  }
+
+  .credits h1 {
+    font-size: 1.8rem;
+  }
+
+
+}
+
+@media screen and (max-width:768px) {
+
+  .results-title {
+    padding-top: 3rem;
+  }
+
+  .update {
+    padding-bottom: 3rem;
+  }
+
+  .result-boxes {
+    width: 80vw;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .box .title {
+    font-size: 2rem;
+  }
+
+  .box .number {
+    font-size: 2rem;
+  }
+
+  .box .rate {
+    font-size: 2rem;
+  }
+
+  .chart-container canvas {
+    width: 340px !important;
+  }
+
+  .chart1 .chart-title {
+    padding: 2rem 4rem;
+  }
+}
+
+
+@media screen and (max-width:600px) {
+  .chart-container {
+    grid-template-columns: 1fr;
+    grid-gap: 3rem;
+    padding: 7rem 0;
+  }
+
+  .chart-container canvas {
+    width: 500px !important;
+  }
+
+
+  #footer {
+    min-height: 25vh;
+  }
+
+  .credits h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width:480px) {
+
+  .results-title {
+    font-size: 2.3rem;
+  }
+
+  .result-boxes {
+    width: 90vw;
+  }
+
+  .chart-container canvas {
+    width: 350px !important;
+    height: 250px !important;
+  }
+
+
+  .box .title {
+    font-size: 2rem;
+  }
+
+  .box .number {
+    font-size: 2rem;
+  }
+
+  .box .rate {
+    font-size: 2rem;
+  }
+
+  .result-boxes {
+    grid-template-columns: 1fr;
+  }
+
+}
