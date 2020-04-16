@@ -319,7 +319,24 @@ section {
 
   .result-boxes {
     width: 90vw;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
   }
+
+
+
+  .box .title {
+    font-size: 1.6rem;
+  }
+
+  .box .number {
+    font-size: 1.8rem;
+  }
+
+  .box .rate {
+    font-size: 1.8rem;
+  }
+
 
   .chart-container canvas {
     width: 350px !important;
@@ -327,20 +344,17 @@ section {
   }
 
 
-  .box .title {
+
+}
+
+
+@media screen and (max-width: 320px) {
+
+  .results-title {
     font-size: 2rem;
   }
 
-  .box .number {
-    font-size: 2rem;
+  .chart-container canvas {
+    width: 300px !important;
   }
-
-  .box .rate {
-    font-size: 2rem;
-  }
-
-  .result-boxes {
-    grid-template-columns: 1fr;
-  }
-
 }
