@@ -354,6 +354,11 @@ section {
     font-size: 2rem;
   }
 
+  .result-boxes {
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+
   .chart-container canvas {
     width: 300px !important;
   }
