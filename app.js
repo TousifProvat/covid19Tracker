@@ -25,14 +25,15 @@ const covidTracker = require("./utils/covid19-tracker");
 //routes
 app.get("/", (req, res) => {
   covidTracker(
-    "bangladesh",
+    "countries/bangladesh",
     (error, { confirmed, recovered, deaths, update } = {}) => {
       var currentDate = new Date(update);
       var date = currentDate.getDate();
-      var month = currentDate.getMonth(); //Be careful! January is 0 not 1
+      var month = currentDate.getMonth();
       var year = currentDate.getFullYear();
 
       var dateString = date + "-" + (month + 1) + "-" + year;
+
       if (error) {
         return res.send(error);
       } else {

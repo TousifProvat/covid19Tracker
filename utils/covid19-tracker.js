@@ -1,7 +1,7 @@
 const request = require("request");
 
 const covidTracker = (address, callback) => {
-  covidUrl = `https://covid19.mathdro.id/api/countries/${address}`;
+  covidUrl = `https://covid19.mathdro.id/api/${address}`;
   request({ url: covidUrl, json: true }, (error, { body }) => {
     if (error) {
       callback(

@@ -30,7 +30,7 @@ section {
 
 .results-title {
   font-size: 3rem;
-  color: coral;
+  color: rgba(212, 7, 7, 1);
 }
 
 .country {
@@ -187,7 +187,7 @@ section {
 
 @media screen and (max-width:1024px) {
   section {
-    min-height: 70vh;
+    min-height: 60vh;
   }
 
   .result-boxes {
@@ -357,6 +357,18 @@ section {
   .result-boxes {
     grid-template-columns: 1fr;
     grid-gap: 2rem;
+  }
+
+  .box .title {
+    font-size: 2rem;
+  }
+
+  .box .number {
+    font-size: 2rem;
+  }
+
+  .box .rate {
+    font-size: 2rem;
   }
 
   .chart-container canvas {

@@ -1,6 +1,6 @@
 const Confirmed = document.querySelector(".confirmed .number").textContent;
 const Recovered = document.querySelector(".recovered .number").textContent;
-const Infected = document.querySelector(".infected .number").textContent;
+// const Infected = document.querySelector(".infected .number").textContent;
 
 const Deaths = document.querySelector(".deaths .number").textContent;
 
@@ -12,20 +12,20 @@ window.onload = function () {
   const myChart = new Chart(ctx, {
     type: "bar",
     data: {
-      labels: ["Confirmed", "Infected", "Recovered", "Deaths"],
+      labels: ["Confirmed", "Recovered", "Deaths"],
       datasets: [
         {
-          data: [Confirmed, Infected, Recovered, Deaths],
+          data: [Confirmed, Recovered, Deaths],
           fillColor: true,
           borderColor: [
             "rgba(105, 75, 161, 1)",
-            "rgba(239, 128, 24, 1)",
+            // "rgba(239, 128, 24, 1)",
             "rgba(31, 132, 30, 1)",
             "rgba(212, 7, 7, 1)",
           ],
           backgroundColor: [
             "rgba(105, 75, 161, 0.5)",
-            "rgba(239, 128, 24, 0.5)",
+            // "rgba(239, 128, 24, 0.5)",
             "rgba(31, 132, 30, 0.5)",
             "rgba(212, 7, 7, 0.5)",
           ],
@@ -52,7 +52,7 @@ window.onload = function () {
     },
   });
 
-  //second chart
+  // second chart
   const canvas2 = document.getElementById("myChart2");
   const ctx2 = canvas2.getContext("2d");
 
@@ -81,7 +81,7 @@ window.onload = function () {
         {
           label: "Confirmed",
           backgroundColor: "rgba(105, 75, 161, 0.3)",
-          lineTension: 0,
+          // lineTension: 1,
           borderColor: "rgba(105, 75, 161, 1)",
           data: [
             77056,
@@ -103,7 +103,7 @@ window.onload = function () {
         {
           label: "Recovered",
           backgroundColor: "rgba(31, 132, 30, 0.3)",
-          lineTension: 0,
+          // lineTension: 1,
 
           borderColor: "rgba(31, 132, 30, 1)",
           data: [
@@ -126,7 +126,7 @@ window.onload = function () {
         {
           label: "Deaths",
           backgroundColor: "rgba(212, 7, 7, 0.3)",
-          lineTension: 0,
+          // lineTension: 1,
 
           borderColor: "rgba(212, 7, 7, 1)",
           data: [
