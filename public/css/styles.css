@@ -49,6 +49,7 @@ section {
 .results-title {
   font-size: 3rem;
   color: rgba(212, 7, 7, 1);
+  text-align: center;
 }
 
 .country {
@@ -149,7 +150,7 @@ section {
 }
 
 .chart-title span {
-  color: coral;
+  color: rgba(212, 7, 7, 1);
 }
 
 #footer {
@@ -353,15 +354,15 @@ section {
 
 
   .box .title {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 
   .box .number {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   .box .rate {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
 
