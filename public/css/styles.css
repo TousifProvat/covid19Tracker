@@ -209,6 +209,15 @@ section {
     min-height: 60vh;
   }
 
+  .results-title {
+    padding-top: 2rem;
+  }
+
+  .update {
+    padding-bottom: 3rem;
+  }
+
+
   .result-boxes {
     width: 95vw;
   }
@@ -223,6 +232,10 @@ section {
 
   .box .rate {
     font-size: 2rem;
+  }
+
+  #chart {
+    padding: 3rem 0;
   }
 
   .chart-container canvas {
@@ -282,9 +295,6 @@ section {
     padding-top: 3rem;
   }
 
-  .update {
-    padding-bottom: 3rem;
-  }
 
   .result-boxes {
     width: 80vw;
@@ -303,12 +313,14 @@ section {
     font-size: 2rem;
   }
 
+
+
   .chart-container canvas {
     width: 340px !important;
   }
 
   .chart1 .chart-title {
-    padding: 2rem 4rem;
+    padding: 2rem 1rem;
   }
 }
 
