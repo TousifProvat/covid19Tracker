@@ -153,6 +153,142 @@ section {
   color: rgba(212, 7, 7, 1);
 }
 
+
+#slider {
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 60vh;
+  overflow: hidden;
+
+}
+
+.slider-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.slider-container>div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-container>div>div {
+  overflow: hidden;
+}
+
+.slider {
+  width: 100vw;
+  height: 450px;
+  display: grid;
+  grid-template-columns: repeat(7, 100%);
+  transform: translateX(-100vw);
+  position: relative;
+}
+
+.slider-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+#slider .options {
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  list-style: none;
+  display: flex;
+}
+
+.options li {
+  width: 18px;
+  height: 18px;
+  border: 2.5px solid #2ecc71;
+  border-radius: 50%;
+  margin: 0.3rem;
+  cursor: pointer;
+}
+
+.options li.colored {
+  background-color: #2ecc71;
+}
+
+#slider #prev-btn {
+  position: absolute;
+  left: 15px;
+}
+
+#slider #next-btn {
+  position: absolute;
+  right: 15px;
+}
+
+#slider button {
+  z-index: 100;
+  background: transparent;
+  border: none;
+  color: #888888;
+  font-size: 2rem;
+  outline: none;
+  cursor: pointer;
+}
+
+#slider button:hover {
+
+  color: #333333;
+
+}
+
+#advice {
+  flex-direction: column;
+  color: #888888;
+  min-height: 100vh;
+}
+
+#advice .heading {
+  font-size: 2rem;
+  padding: 1rem 0.5rem;
+  text-align: center;
+}
+
+#advice .advices-list {
+  padding: 1rem 0;
+
+}
+
+.advices-list li {
+  padding: 0.5rem 0;
+}
+
+#advice .advice-footer {
+  width: 55vw;
+
+}
+
+.advice-footer p {
+  font-weight: 600;
+  padding: 0.2rem 0;
+}
+
 #footer {
   display: flex;
   flex-direction: column;
@@ -195,6 +331,19 @@ section {
 
   .box .title {
     font-size: 2rem;
+  }
+
+  #slider {
+    margin: 3rem 0;
+  }
+
+  #advice {
+    margin: 3rem 0;
+  }
+
+  #advice .advice-footer {
+    width: 64vw;
+
   }
 
 
@@ -241,6 +390,28 @@ section {
   .chart-container canvas {
     width: 400px !important;
   }
+
+  #slider {
+    min-height: 30vh;
+  }
+
+  #slider .options {
+    bottom: 2%;
+  }
+
+  #advice {
+    margin: 4rem 0;
+    min-height: 50vh;
+  }
+
+  #advice .advices-list {
+    padding: 1rem 7rem;
+  }
+
+  #advice .advice-footer {
+    width: 80vw;
+
+  }
 }
 
 @media screen and (max-width:900px) {
@@ -275,6 +446,24 @@ section {
 
   .chart-container canvas {
     width: 380px !important;
+  }
+
+  #slider {
+    min-height: 30vh;
+  }
+
+  #slider .options {
+    bottom: 2%;
+  }
+
+  #advice .advices-list {
+    padding: 1rem 10rem;
+  }
+
+
+  #advice .advice-footer {
+    width: 65vw;
+
   }
 
 
@@ -322,6 +511,29 @@ section {
   .chart1 .chart-title {
     padding: 2rem 1rem;
   }
+
+  #slider .options {
+    bottom: 2%;
+  }
+
+  #advice {
+    min-height: 50vh;
+  }
+
+  #advice .heading {
+    font-size: 1.8rem;
+  }
+
+  #advice .advices-list {
+    padding: 1rem 7rem;
+  }
+
+  #advice .advice-footer {
+    width: 71vw;
+
+  }
+
+
 }
 
 
@@ -339,6 +551,19 @@ section {
 
   .chart-container canvas {
     width: 500px !important;
+  }
+
+  #slider button i {
+    font-size: 1.8rem !important;
+  }
+
+  #advice .advices-list {
+    padding: 1rem 4rem;
+  }
+
+  #advice .advice-footer {
+    width: 80vw;
+
   }
 
 
@@ -383,6 +608,58 @@ section {
     height: 250px !important;
   }
 
+  #slider {
+    min-height: 30vh;
+  }
+
+  #slider .options {
+    bottom: 2%;
+  }
+
+  #advice .heading {
+    font-size: 1.4rem;
+  }
+
+  #advice .advices-list {
+    padding: 1rem 3rem;
+  }
+
+}
+
+@media screen and (max-width: 350px) {
+
+  .chart-container canvas {
+    width: 325px !important;
+  }
+
+  #slider {
+    min-height: 20vh;
+  }
+
+  #slider .options {
+    bottom: 8%;
+  }
+
+  #advice {
+    min-height: 50vh;
+  }
+
+  #advice .heading {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  #advice .advices-list {
+    padding: 1rem 3rem;
+  }
+
+  .advices-list li {
+    font-size: 0.9rem;
+  }
+
+  #advice .advice-footer {
+    width: 90vw;
+  }
 
 
 }
@@ -418,5 +695,13 @@ section {
 
   .chart-container canvas {
     width: 300px !important;
+  }
+
+  #slider {
+    min-height: 20vh;
+  }
+
+  #advice {
+    min-height: 50vh;
   }
 }

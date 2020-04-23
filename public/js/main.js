@@ -159,7 +159,7 @@ window.onload = function () {
             7851,
             6875,
             7611,
-            6481
+            6481,
           ],
         },
       ],
@@ -201,3 +201,93 @@ window.onload = function () {
     },
   });
 };
+
+//Slider-javascript
+
+const Slider = document.querySelector(".slider");
+const sliderImgs = document.querySelectorAll(".slider-img");
+const options = document.querySelectorAll(".options li");
+//btn
+const prevBtn = document.querySelector("#prev-btn");
+const nextBtn = document.querySelector("#next-btn");
+//counter
+let counter = 1;
+let op_index = 0;
+const size = sliderImgs[counter].clientWidth;
+
+//function
+
+const update = () => {
+  Slider.style.transform = "translateX(" + -size * counter + "px)";
+
+  options.forEach((op) => op.classList.remove("colored"));
+  options[op_index].classList.add("colored");
+};
+
+const slide = () => {
+  Slider.style.transition = "transform 0.5s ease-in-out";
+  update();
+};
+
+setInterval(() => {
+  counter++;
+  if (op_index == 4) {
+    op_index = 0;
+  } else {
+    op_index++;
+  }
+  slide();
+}, 5000);
+
+function optionPlay() {
+  let i = Number(this.getAttribute("option-index"));
+  counter = i + 1;
+  op_index = i;
+  slide();
+}
+
+Slider.addEventListener("transitionend", () => {
+  if (sliderImgs[counter].id === "last") {
+    Slider.style.transition = "none";
+    counter = sliderImgs.length - 2;
+    Slider.style.transform = "translateX(" + -size * counter + "px)";
+  } else if (sliderImgs[counter].id === "first") {
+    Slider.style.transition = "none";
+    counter = 1;
+    Slider.style.transform = "translateX(" + -size * counter + "px)";
+  }
+});
+
+nextBtn.addEventListener("click", () => {
+  if (counter >= 5) return;
+  counter++;
+  if (op_index == 4) {
+    op_index = 0;
+  } else {
+    op_index++;
+  }
+
+  slide();
+});
+
+prevBtn.addEventListener("click", () => {
+  if (counter <= 0) return;
+  counter--;
+  if (op_index == 0) {
+    op_index = 4;
+  } else {
+    op_index--;
+  }
+  slide();
+});
+
+const height = sliderImgs[counter].clientHeight;
+const sliderSection = document.getElementById("slider");
+
+const sizeFix = () => {
+  sliderSection.style.minHeight = height;
+};
+
+sizeFix();
+
+options.forEach((option) => option.addEventListener("click", optionPlay));
