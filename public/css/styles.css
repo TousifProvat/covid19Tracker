@@ -158,7 +158,7 @@ section {
   align-items: center;
   justify-content: center;
   position: relative;
-  min-height: 60vh;
+  min-height: 100vh;
   overflow: hidden;
 
 }
@@ -190,7 +190,7 @@ section {
 
 .slider {
   width: 100vw;
-  height: 450px;
+  height: 100vh;
   display: grid;
   grid-template-columns: repeat(7, 100%);
   transform: translateX(-100vw);
@@ -335,6 +335,11 @@ section {
 
   #slider {
     margin: 3rem 0;
+    min-height: 50vh;
+  }
+
+  .slider {
+    min-height: 50vh;
   }
 
   #advice {
@@ -392,7 +397,11 @@ section {
   }
 
   #slider {
-    min-height: 30vh;
+    min-height: 50vh;
+  }
+
+  .slider {
+    min-height: 50vh;
   }
 
   #slider .options {
@@ -449,7 +458,7 @@ section {
   }
 
   #slider {
-    min-height: 30vh;
+    min-height: 45vh;
   }
 
   #slider .options {
@@ -510,6 +519,10 @@ section {
 
   .chart1 .chart-title {
     padding: 2rem 1rem;
+  }
+
+  #slider {
+    min-height: 40vh;
   }
 
   #slider .options {
@@ -609,7 +622,7 @@ section {
   }
 
   #slider {
-    min-height: 30vh;
+    min-height: 25vh;
   }
 
   #slider .options {
