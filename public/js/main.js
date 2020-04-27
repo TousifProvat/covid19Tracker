@@ -87,6 +87,7 @@ window.onload = function () {
         "04/23",
         "04/24",
         "04/25",
+        "04/26",
       ],
       datasets: [
         {
@@ -120,6 +121,7 @@ window.onload = function () {
             88337,
             99153,
             83334,
+            80976
           ],
         },
         {
@@ -154,6 +156,7 @@ window.onload = function () {
             31235,
             39769,
             33941,
+            47707
           ],
         },
         {
@@ -188,6 +191,7 @@ window.onload = function () {
             6747,
             6275,
             5967,
+            3770
           ],
         },
       ],
